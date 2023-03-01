@@ -14,25 +14,44 @@
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
 </head>
 
-<body class="bg-gradient-primary" style="background: var(--info);">
-    <div class="p-5">
-        <div class="text-center">
-            <h4 class="text-dark mb-4" style="color: var(--white);text-align: center;">Welcome Back!</h4>
+<body class="bg-gradient-primary h-100" style="background: var(--info);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background: transparent;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html" style="color: var(--info);">E-Voter</a>
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mr-auto"></ul>
+                <span class="navbar-text actions"> 
+                    <a class="login" href="login.html">Log In</a>
+                    <a class="btn btn-light action-button" role="button" href="register.html">Register</a>
+                </span>
+            </div>
         </div>
-        <form class="user">
-            <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
-            <div class="form-group"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
-            <div class="form-group">
-                <div class="custom-control custom-checkbox small">
-                    <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1" style="color: var(--white);">Remember Me</label></div>
+    </nav>
+    <div class="row justify-content-center">
+        <div class="col-md-8 pt-5">
+            <div class="px-2 pt-5 mt-5">
+                <div class="text-center">
+                    <h4 class="text-white mb-4" style="color: var(--white);text-align: center;">Welcome Back!</h4>
                 </div>
-            </div><button class="btn btn-primary btn-block text-white btn-user" type="submit">Login</button>
-            <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a><a class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Login with Facebook</a>
-            <hr>
-        </form>
-        <div class="text-center"><a class="small" href="forgot-password.html" style="color: var(--white);">Forgot Password?</a></div>
-        <div class="text-center"><a class="small" href="register.html" style="color: var(--white);">Create an Account!</a></div>
+                <form class="user">
+                    <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
+                    <div class="form-group"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox small">
+                            <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1" style="color: var(--white);">Remember Me</label></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block text-white btn-user" type="submit">Login</button>
+                    <hr>
+                </form>
+                <div class="text-center"><a class="small" href="forgot-password.html" style="color: var(--white);">Forgot Password?</a></div>
+                <div class="text-center"><a class="small" href="register.html" style="color: var(--white);">Create an Account!</a></div>
+            </div>
+        </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>

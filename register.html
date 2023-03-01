@@ -12,29 +12,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/success-modal.css">
 </head>
 
-<body class="bg-gradient-primary" style="background: var(--info);">
-    <div class="p-5">
-        <div class="text-center" style="color: var(--white);">
-            <h4 class="text-dark mb-4" style="color: var(--white);">Create an Account!</h4>
-        </div>
-        <form class="user">
-            <div class="form-group row">
-                <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="First Name" name="first_name"></div>
-                <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Last Name" name="last_name"></div>
+<body class="bg-gradient-primary h-100" style="background: var(--info);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background: transparent;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html" style="color: var(--info);">E-Voter</a>
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mr-auto"></ul>
+                <span class="navbar-text actions"> 
+                    <a class="login" href="login.html">Log In</a>
+                    <a class="btn btn-light action-button" role="button" href="register.html">Register</a>
+                </span>
             </div>
-            <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="email"></div>
-            <div class="form-group row">
-                <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="password"></div>
-                <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="password_repeat"></div>
-            </div><button class="btn btn-primary btn-block text-white btn-user" type="submit">Register Account</button>
-            <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Register with Google</a><a class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Register with Facebook</a>
-            <hr>
-        </form>
-        <div class="text-center"><a class="small" href="forgot-password.html" style="color: var(--white);">Forgot Password?</a></div>
-        <div class="text-center"><a class="small" href="login.html" style="color: var(--white);">Already have an account? Login!</a></div>
+        </div>
+    </nav>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="px-2 pt-5 mt-5">
+                <div class="text-center" style="color: var(--white);">
+                    <h4 class="text-white mb-4" style="color: var(--white);">Create an Account!</h4>
+                </div>
+                <form class="user">
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input class="form-control form-control-user" type="text" id="firstNameInput" placeholder="First Name" name="first_name">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control form-control-user" type="text" id="lastNameInput" placeholder="Last Name" name="last_name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input class="form-control form-control-user" type="text" id="ageInput" placeholder="Age" name="age">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control form-control-user" type="text" id="ninInput" placeholder="National Identity Number" name="nin">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-user" type="email" id="emailInput" aria-describedby="emailHelp" placeholder="Email Address" name="email">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input class="form-control form-control-user" type="password" id="passwordInput" placeholder="Password" name="password"></div>
+                        <div class="col-sm-6">
+                            <input class="form-control form-control-user" type="password" id="repeatPasswordInput" placeholder="Repeat Password" name="password_repeat">
+                        </div>
+                    </div>
+                    <!-- Button HTML (to Trigger Modal) -->
+                    <a href="#myModal" class="text-white" data-toggle="modal">
+                        <button class="btn btn-primary btn-block text-white btn-user" type="submit">
+                            Register Account
+                        </button>
+                    </a>
+                    <hr>
+                </form>
+                <div class="text-center"><a class="small" href="forgot-password.html" style="color: var(--white);">Forgot Password?</a></div>
+                <div class="text-center"><a class="small" href="login.html" style="color: var(--white);">Already have an account? Login!</a></div>
+            </div>
+        </div>
+        
     </div>
+
+    <!-- Success Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>				
+                    <h4 class="modal-title w-100">Awesome!</h4>	
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Your registration was successful. Please click the login button to login.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
