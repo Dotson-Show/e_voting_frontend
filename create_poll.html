@@ -114,83 +114,32 @@
                     </div>
                 </nav>
                 <div class="container-fluid" style="min-height: 620px">
-                    <h3 class="text-dark mb-4">Profile</h3>
+                    <h3 class="text-dark mb-4">Create Poll</h3>
                     <div class="row gutters-sm">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
-                            <div class="card-body">
-                              <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-                                <div class="mt-3">
-                                  <h4>John Doe</h4>
-                                  <p class="text-secondary mb-1">johndoe@example.com</p>
-                                  <p class="text-muted font-size-sm">NIN: 1233223444</p>
-                                  <p class="text-muted font-size-sm">Age: 26</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Present Password</h6>
+                                   <form>
+                                        <div class="form-group">
+                                             <label for="pollTypeInput">Poll Type</label>
+                                             <select id="pollTyopeInput" class="form-control" name="poll_type">
+                                                  <option value="1">Presidential Election</option>
+                                                  <option value="2">Governotorial Election</option>
+                                                  <option value="3">Counselor Election</option>
+                                                  <option value="4">House Of Rep Election</option>
+                                             </select>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="password" name="old_password" class="form-control" value="">
+                                        <div class="form-group">
+                                             <label for="pollDateInput">Poll Date</label>
+                                             <input type="date" class="form-control" id="pollDateInput" name="poll_date">
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">New Password</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="password" name="new_password" class="form-control" value="">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-3"></div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="button" class="btn btn-primary px-4" value="Update Password">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          
-        
-                    <!-- <div class="row mb-3">
-                        <div class="col-lg-4">
-                            <div class="card mb-3">
-                                <div class="card-body text-center shadow">
-                                    <img class="rounded-circle mb-3 mt-4" src="assets/img/dogs/image2.jpeg" width="160" height="160">
-                                    <div class="mb-3">
-                                        <button class="btn btn-primary btn-sm" type="button">
-                                            Change Photo
+                                        <button type="submit" class="btn btn-primary">
+                                             Submit
                                         </button>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card shadow mb-3">
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 font-weight-bold">
-                                                Details
-                                            </p>
-                                        </div>
-                                        <div class="card-body">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <footer class="bg-white sticky-footer">
