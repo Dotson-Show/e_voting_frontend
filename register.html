@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="assets/css/success-modal.css">
+    <link rel="stylesheet" href="assets/css/alert-modal.css">
 </head>
 
 <body class="bg-gradient-primary h-100" style="background: var(--info);">
@@ -64,7 +64,7 @@
                             <input class="form-control form-control-user" type="password" id="repeatPasswordInput" placeholder="Repeat Password" name="password_repeat">
                         </div>
                     </div>
-                    <!-- Button HTML (to Trigger Modal) -->
+                    <!-- Button HTML (to Trigger Modal)  anchor to be removed-->
                     <a href="#myModal" class="text-white" data-toggle="modal">
                         <button class="btn btn-primary btn-block text-white btn-user" type="submit">
                             Register Account
@@ -94,6 +94,26 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- Failure Modal HTML -->
+    <div id="myFailModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box-failure">
+                        <i class="material-icons">&#xE5CD;</i>
+                    </div>				
+                    <h4 class="modal-title w-100">Sorry!</h4>	
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Your registration failed. Please go back and try again.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-failure btn-danger btn-block" data-dismiss="modal">OK</button>
                 </div>
             </div>
         </div>
